@@ -1,5 +1,0 @@
-﻿asynchtrue:SendQuestionIndex(GetQuestionIndex(), Action.ContinueRun);
-ShowStatus(ExamState.Prepare);
-asynchtrue:WaitTime("Action.ContinueRun", $res("xt:item>readtime"), true);
-asynchtrue:StartRecord($res("xt:item"));
-asynchtrue:Play("Action.ContinueRun", GetComResPath() + $res("mb:section>stop_record"));
