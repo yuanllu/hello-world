@@ -1,0 +1,447 @@
+.exam_box
+{
+    position:relative;
+}
+
+.exam_box .finish
+{
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    width: 98%;
+}
+
+.exam_box .checkanswer_title{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    width:100%;
+    padding-top:20px;
+}
+
+.Caption_QuestionWithBlank{
+    margin: 25px 0 30px;
+}
+.exam_box .caption .Caption_QuestionWithBlank h1{
+    line-height: 1.5;
+	font-size: 22px;
+	font-weight:bold;
+}
+.exam_box .caption .Caption_QuestionWithBlank h1 p{
+    margin: 0px;
+    padding-left: 0px;
+    font-size: 22px;
+    cursor:auto;
+    display: inline;
+}
+.exam_box .caption .Caption_QuestionWithBlank h1 span{
+    margin: 0px;
+    padding-left: 0px;
+    font-size: 22px;
+    cursor:auto;
+    display: inline;
+}
+
+.Caption_QuestionWithBlank input[type=text]{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 22px;
+    font-family: "Times New Roman",verdana, tahoma, helvetica, arial, sans-serif;
+    height: 26px;
+    text-align: center;
+    width: 180px;
+}
+
+
+/*�Ͳ����Ͷ���*/
+.exam_box input
+{
+    cursor:pointer;
+}
+
+input.disabled
+{
+    /*background:url(../images/btnGray.gif) no-repeat;*/
+    background-position: -330px 0;
+}
+
+/*--------------added by bingcheng to support xining--------------------*/
+#question div.caption
+{
+    padding-top: 0px;
+    padding-bottom: 18px;
+}
+/*----------------------------------------------------------------------*/
+
+/*�Ͳ����Ͷ���*/
+/*#question div.caption p span
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+    display: block;
+}
+
+#question div.caption p
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+}*/
+
+div .caption .Caption_QuestionText_RTS{
+    color: #000000;
+    cursor: auto;
+    font-size: 24px;
+}
+div .caption .Caption_QuestionText_RTS p{
+    color: #000000;
+    cursor: auto;
+    font-size: 24px;
+}
+
+div.caption>p span
+{
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-left:15px;
+}
+
+.exam_box .caption p span>p{
+    font-size: 20px;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 0px;
+}
+
+div.caption p
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#question div.caption p span.cur
+{
+    color:#FF6600;
+}
+
+.cur{
+    color:#FF6600;
+}
+
+.btn_usual
+{
+    cursor:pointer;
+}
+
+.dashedBottom
+{
+    border-bottom: 1px dashed #000000;
+    /* line-height:50px; */
+    margin-bottom:10px;
+}
+
+.guidTxt
+{
+    margin-top: 10px;
+    text-indent:32px;
+    font-size:16px;
+    color:#666666;
+    font-weight:400;
+    line-height:20px;
+}
+
+.Caption_DiscriptionText
+{
+    font-size:16px;
+}
+
+.exam_box .caption{
+	line-height: 30px;
+	font-size: 20px;
+}
+
+.exam_box .caption font
+{
+    font-size: 20px;
+    line-height: 30px;
+	width: 40px;
+	padding-right: 0px;
+	text-align: left;
+}
+
+.exam_box .caption p
+{
+    line-height: 30px;
+	font-size: 20px;
+}
+
+.exam_box .words
+{
+    margin-top: 18px;
+    height: 520px;
+    line-height: 26px;
+	font-size: 20px;
+    padding-left:32px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Calibri;
+}
+
+.exam_box .caption .survery-choice p
+{
+    padding-left: 15px;
+}
+
+.exam_box .caption table td p
+{
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+.text-right
+{
+    margin:30px 0 0 630px;
+}
+
+.blanks_fillblanks
+{
+    font-size: 18px;
+    background-color: #DFE9F4;
+    margin-left: -50px;
+    margin-right: -25px;
+}
+
+.blanks_fillblanks input[type=text]
+{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    font-family: "Times New Roman",verdana, tahoma, helvetica, arial, sans-serif;
+    background-color: #DFE9F4;
+}
+
+.blanks_fillblanks span{
+    padding-right: 3px;
+}
+
+.situationPresentation_promptText{
+     padding-left: 30px;
+     padding-bottom: 10px;
+     font-size: 24px;
+     line-height: 1.5;
+}
+
+.situationPresentation_promptText span{
+}
+
+.retelling_promptText{
+    font-size: 24px;
+    line-height: 1.5;
+    text-indent: 32px;
+}
+
+.retelling_promptText p{
+    font-size: 24px;
+    line-height: 1.5;
+    text-indent: 32px;
+    display: inline;
+}
+
+
+.exam_box .caption .Caption_DiscriptionText>span{
+    font-size: 18px;
+    line-height: 1.5;
+    background-color:#FFF68F;
+    font-weight: bold;
+}
+
+.exam_box .caption .Caption_DiscriptionText>span>p{
+    font-size: 18px;
+    line-height: 1.5;
+    background-color:#FFF68F;
+    font-weight: bold;
+	display:inline;
+	padding:0px;
+
+}
+
+.Caption_QuestionText {
+   /* margin-top: 10px;*/
+}
+
+.Caption_QuestionTextAbsoulte {
+
+}
+
+
+.Caption_QuestionText_RSP {
+    padding-top: 30px;
+}
+
+
+
+
+/*艺术考试连线题 zcsun2*/
+.showBox{
+    position: relative;
+    width: 650px;
+    cursor: pointer;
+	height: 500px;
+	z-index: 0;
+}
+.leftBox{
+	float:left;
+	width: 250px;
+}
+.leftBox input{
+	float: right;
+	margin-top: 35px;
+}
+
+.rightBox{
+	float: right;
+	width: 210px;
+}
+.rightBox input{
+	float: left;
+	margin-left: 4px;
+	margin-top: 35px;
+}
+.boxItem{
+	width: 100%;
+	height: 150px;
+    display: block;
+    margin: 15px 0;
+    background: #0CF;
+    color: #fff;
+    line-height: 80px;
+}
+.showBox span.addstyle {
+	background:#F96;
+}
+.sureCva{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-1;
+}
+.backCva{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-2;
+}
+.defaultL{
+	float: right;
+	margin-top: 65px;
+	background: url(../images/uncheck.png) no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.defaultR{
+	float: left;
+	margin-left: 4px;
+	margin-top: 65px;
+	background: url(../images/uncheck.png) no-repeat;
+	width: 20px;
+	height: 20px;
+
+}
+.inputChecked{
+	background: url(../images/checked.png) no-repeat;
+}
+
+.fillimg{
+    width: 150px;
+    margin: 15px 15px 0 15px;
+    height: 150px;
+    border: 1px solid #000;
+    cursor:pointer;
+    float:left;
+
+}
+.img0{
+    margin:2px;
+    cursor:pointer;
+    position:relative;
+    width: 140px;
+    height: 140px;
+}
+.imgDiv{
+    float:left;
+    width:150px;
+    height:150px;
+    margin:15px;
+}
+.num{
+    display:inline-block;
+    width:150px;
+    margin:0 15px;
+    text-align:center;
+}
+.left{
+    float: left;
+}
+
+::-webkit-scrollbar-track-piece { //滚动条凹槽的颜色，还可以设置边框属性
+    background-color:#f8f8f8;
+}
+::-webkit-scrollbar {//滚动条的宽度
+    width:6px;
+    height:9px;
+}
+::-webkit-scrollbar-thumb {//滚动条的设置
+    background-color:#dddddd;
+    background-clip:padding-box;
+    min-height:28px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:#bbb;
+}
+
+.words::-webkit-scrollbar {
+    width: 6px;
+}
+.words::-webkit-scrollbar-track {
+    background-color:white;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+}
+.words::-webkit-scrollbar-thumb {
+    background-color:#A9A9A9;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius:2em;
+}
+
+/*---------------------------------------------------*/
+
+/*input[type="radio"]{*/
+    /*visibility: hidden;*/
+/*}*/
+
+/*.radio_normal{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_normal.png) no-repeat 0 6px;*/
+    /**/
+/*}*/
+
+/*.radio_checked{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_checked.png) no-repeat 0 7px;*/
+/*}*/
+
+/*.radio_normal_survey{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_normal.png) no-repeat 0 -1px;*/
+    /**/
+/*}*/
+
+/*.radio_checked_survey{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_checked.png) no-repeat 0 0;*/
+/*}*/

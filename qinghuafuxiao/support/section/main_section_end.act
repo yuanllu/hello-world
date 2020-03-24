@@ -1,0 +1,2 @@
+﻿ShowStatus(ExamState.ListenInstruction);
+asynchtrue:Play("Action.ContinueRun", GetComResPath() + $res("mb:section.jump_prompt"));

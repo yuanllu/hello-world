@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>试卷调查</title>
+        <link href="style/style_exam.css" rel="stylesheet" type="text/css">
+        <link href="style/comm.css" rel="stylesheet" type="text/css">
+        <link href="style/Integration.css" rel="stylesheet" type="text/css">
+        <script src="Scripts/common/BuildLibrary.js" type="text/javascript"></script>
+        <script src="Scripts/common/Cef.js" type="text/javascript"></script>
+        <script src="Scripts/config.js" type="text/javascript"></script><link rel="stylesheet" href="support/default.css">
+        <script src="Scripts/common/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="Scripts/common/async.js" type="text/javascript"></script>
+        <script src="Scripts/common/IntegrationModels.js" type="text/javascript"></script>
+        <script src="Scripts/common/BridgingUtil.js" type="text/javascript"></script>
+        <script src="Scripts/common/IntegrationCefWrapper.js" type="text/javascript"></script>
+        <script src="Scripts/common/IntegrationComm.js" type="text/javascript"></script>
+        <script src="Scripts/common/Lightbox.js" type="text/javascript"></script>
+        <script src="Scripts/Integration.js" type="text/javascript"></script>
+        <script src="Scripts/view/viewComm.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="exam_box">
+            <div class="title_box">
+                <div class="title" id="title">调查问卷</div>
+                <div id="guide"><div class="guidTxt">同学你好！请认真阅读下面7道题目，看清题目要求，按要求作答。题目均为单选题，请选择符合你实际情况的一个选项。点击选项进行作答。</div></div>
+                <div id="prompt"></div>      
+            </div>
+
+            <div class="words" id="question">
+                <div><br/></div>
+                <h1 style="display:inline;line-height:1.5;font-size:22px;font-weight:bold;padding-bottom:20px">你觉得在本次口语和听力测试时，以下符合你情况的程度是：</h1>
+                    <div id="question0_0_0" class="caption" type="radio">
+                            <div class="Caption_QuestionText">
+                                <h1 style="display:inline">1.在刚才的口语和听力测试中，你觉得大部分题目预留时间的情况是：</h1>
+                            </div>
+                            <p>
+                                <div>
+                                    <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                     onmouseover="$(this).addClass('cur')"
+                                    onmouseout="$(this).removeClass('cur')">
+                                    <input name="c0_0_0" type="radio" value="0" style="margin-right: 8px">A.太长</span>
+                                </div>
+                                <div>
+                                    <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                     onmouseover="$(this).addClass('cur')" 
+                                    onmouseout="$(this).removeClass('cur')">
+                                    <input name="c0_0_0" type="radio" value="1" style="margin-right: 8px">B.比较长&nbsp;</span> 
+                                </div>
+                                <div>
+                                    <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                     onmouseover="$(this).addClass('cur')" 
+                                    onmouseout="$(this).removeClass('cur')">
+                                    <input name="c0_0_0" type="radio" value="2" style="margin-right: 8px">C.合适</span> 
+                                </div>
+                                <div>
+                                    <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                     onmouseover="$(this).addClass('cur')" 
+                                    onmouseout="$(this).removeClass('cur')">
+                                    <input name="c0_0_0" type="radio" value="3" style="margin-right: 8px">D.比较短</span> 
+                                </div>
+                                <div>
+                                    <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                     onmouseover="$(this).addClass('cur')" 
+                                    onmouseout="$(this).removeClass('cur')">
+                                    <input name="c0_0_0" type="radio" value="4" style="margin-right: 8px">E.太短</span> 
+                                </div>
+                            </p>
+                        </div>
+                        <div id="question0_0_1" class="caption" type="checkbox">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">2.在刚才的口语和听力测试中，旁边的考生对你有影响吗？</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_1" type="radio" value="0" style="margin-right: 8px">A.有严重影响</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_1" type="radio" value="1" style="margin-right: 8px">B.有一点影响</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_1" type="radio" value="2" style="margin-right: 8px">C.没有影响</span> 
+                                    </div>
+                                </p>
+                            </div>
+                            <div id="question0_0_2" class="caption" type="checkbox">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">3.在刚才的口语和听力测试中，面对计算机，你觉得紧张吗？</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_2" type="radio" value="0" style="margin-right: 8px">A.很紧张</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_2" type="radio" value="1" style="margin-right: 8px">B.有点紧张</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_2" type="radio" value="2" style="margin-right: 8px">C.基本不紧张</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                        onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_2" type="radio" value="3" style="margin-right: 8px">D.不紧张</span> 
+                                    </div>
+                                   
+                                </p>
+                            </div>
+                            <div><br/></div>
+                            <h1 style="display:inline;line-height:1.5;font-size:22px;font-weight:bold;padding-bottom:20px">对以下不同形式的口语检测形式，你喜欢的程度是：</h1>
+                            <div id="question0_0_3" class="caption" type="radio">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">4.与计算机交流：</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_3" type="radio" value="0" style="margin-right: 8px">A.非常喜欢</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_3" type="radio" value="1" style="margin-right: 8px">B.喜欢 &nbsp;</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_3" type="radio" value="2" style="margin-right: 8px">C.一般</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_3" type="radio" value="3" style="margin-right: 8px">D.不喜欢</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_3" type="radio" value="4" style="margin-right: 8px">E.无所谓</span> 
+                                    </div>
+                                </p>
+                            </div>
+                            <div id="question0_0_4" class="caption" type="radio">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">5.与自己的英语老师交流：</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_4" type="radio" value="0" style="margin-right: 8px">A.非常喜欢</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_4" type="radio" value="1" style="margin-right: 8px">B.喜欢 &nbsp;</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_4" type="radio" value="2" style="margin-right: 8px">C.一般</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_4" type="radio" value="3" style="margin-right: 8px">D.不喜欢</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_4" type="radio" value="4" style="margin-right: 8px">E.无所谓</span> 
+                                    </div>
+                                </p>
+                            </div>
+                            <div id="question0_0_5" class="caption" type="radio">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">6.与不认识的老师交流:</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_5" type="radio" value="0" style="margin-right: 8px">A.非常喜欢</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_5" type="radio" value="1" style="margin-right: 8px">B.喜欢 &nbsp;</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_5" type="radio" value="2" style="margin-right: 8px">C.一般</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_5" type="radio" value="3" style="margin-right: 8px">D.不喜欢</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_5" type="radio" value="4" style="margin-right: 8px">E.无所谓</span> 
+                                    </div>
+                                </p>
+                            </div>
+                            <div id="question0_0_6" class="caption" type="radio">
+                                <div class="Caption_QuestionText">
+                                    <h1 style="display:inline">7.与自己的同学交流：</h1>
+                                </div>
+                                <p>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')"
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_6" type="radio" value="0" style="margin-right: 8px">A.非常喜欢</span>
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_6" type="radio" value="1" style="margin-right: 8px">B.喜欢 &nbsp;</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_6" type="radio" value="2" style="margin-right: 8px">C.一般</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_6" type="radio" value="2" style="margin-right: 8px">D.不喜欢</span> 
+                                    </div>
+                                    <div>
+                                        <span class="radio_btn radio_normal" style="display:inline-block;vertical-align: middle;width:95%" 
+                                         onmouseover="$(this).addClass('cur')" 
+                                        onmouseout="$(this).removeClass('cur')">
+                                        <input name="c0_0_6" type="radio" value="2" style="margin-right: 8px">E.无所谓</span> 
+                                    </div>
+                                </p>
+                            </div>
+            <p class="finish" style="clear:both;position:relative;">
+                <input type="submit" id="btnFinish" value="提交问卷" class="btn_usual btn_green" onclick="submit()" style="display:none;">
+            </p>
+            <div id="userCamera" style="display: none">
+                <video id="camera" width="120px" height="160px" autoplay="autoplay" style="object-fit:fill"></video>
+                <canvas id="cameraCtx" width="120px" height="160px" style="background: black;"></canvas>
+            </div>
+            <script type="text/javascript">
+                function submit(){
+                    var answers=[];
+                    var objs = $('div[type=radio]');
+                    $.each(objs,function(index,obj){
+                        var temp = [];
+                        temp.push(obj.id);
+                        $(obj).find('input').each(function(i,input){
+                            if ($(input).prop('checked')) {
+                                  temp.push(i);
+                               }
+                        });
+                        answers.push(temp.join(','));
+                    });
+                    var ans = $('div[type=checkbox]');
+                    $.each(ans,function(index,an){
+                        var temp=[];
+                        var id = an.id;
+                        temp.push(id);
+                        $(an).find('input').each(function(i,input){
+                            if ($(input).prop('checked')) {
+                                  temp.push(i);
+                               }
+                        });
+                        var res = temp.join(',');
+                        answers.push(temp);
+                    });
+                    
+                    var questionId = $res('mb:question.id');
+                    CEFWrapper.SaveQuestionAnswer(questionId, answers.join('||'), function (result) {
+                        CEFWrapper.SectionEnd("1");
+                    });
+                }
+            </script>
+        </div>
+    </body>
+    
+    </html>

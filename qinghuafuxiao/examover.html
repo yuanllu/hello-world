@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>考试结束</title>
+    <link href="style/style_exam.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/common/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/common/Cef.js" type="text/javascript"></script>
+    <script src="Scripts/common/async.js" type="text/javascript"></script>
+    <script src="Scripts/common/BridgingUtil.js" type="text/javascript"></script>
+    <script src="Scripts/common/Comm.js" type="text/javascript"></script>
+    <script src="Scripts/common/Models.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var ExamOver = new ExamPageUtil();
+        ExamOver.ErrorCode = 0;
+        ExamOver.AbnormalCode = 0;
+        ExamOver.UploadFail = false;
+        CommObj.curPage = ExamOver;
+
+        ExamOver.ReUploadAnswer = function () {
+            if ($("#uploadFail").is(":visible")) {
+                ExamOver.Restore();
+            }
+        };
+
+        ExamOver.Restore = function () {
+            $("#waitBox").show();
+            $("#uploadFail").hide();
+            $("#goodbyeBox").hide();
+            if ((ExamOver.ErrorCode == 13) || (ExamOver.ErrorCode == 14)) ExamOver.ErrorCode = 0;
+            ExamOver.WorkFlow2();
+        }
+
+        // 考试结束的第一阶段处理，只进行一次
+        ExamOver.WorkFlow1 = function (callback) {
+            // 客户端音质检测
+            ExamOver.ClientEvaluate(function (result) {
+                if (result && (ExamOver.ErrorCode == 0)) ExamOver.ErrorCode = result;
+
+                // 打包考生答卷
+                ExamOver.CompressOEF(function (result) {
+                    if (result && (ExamOver.ErrorCode == 0)) ExamOver.ErrorCode = result;
+                    callback();
+                })
+            })
+        }
+        
+        // 考试结束的第二阶段处理，可恢复进行多次
+        ExamOver.WorkFlow2 = function () {
+            ExamOver.UploadAnswer(function (result) {
+                if (result && (ExamOver.ErrorCode == 0)) ExamOver.ErrorCode = result;
+
+                ExamOver.ExamEnd(function (result) {
+                    if (ExamOver.UploadFail) {
+                        $("#waitBox").hide();
+                        $("#uploadFail").show();
+                    } else {
+                        //播放考试结束音频
+                        var endCfgObj = CommObj.curPage.data;
+                        if (endCfgObj && endCfgObj.text)
+                            $("#prompt_text").html(endCfgObj.text);
+                        else
+                            $("#prompt_text").html('英语听说测试到此结束！');
+
+                        $("#waitBox").hide();
+                        $("#goodbyeBox").show();
+
+                        var endPromptAudio = "GoodByePrompt.wav";
+                        if (endCfgObj && endCfgObj.prompt.prompt) {
+                            endPromptAudio = endCfgObj.prompt.prompt;
+                        }
+                        CEFWrapper.GetClientData("audiofile->" + endPromptAudio, function (prompt) {
+                            console.log(prompt);
+                            CEFWrapper.Play("void", prompt);
+                        });
+                    }
+                });
+            });
+        }
+
+        ExamOver.ClientEvaluate = function (callback) {
+            CEFWrapper.ClientEvaluate("", function (result) {
+                console.log("考生语音音质等级判断出错：" + result);
+                var evalResultObj = EvalData(result);
+
+                if (evalResultObj.is_abnormal != 0)
+                    ExamOver.AbnormalCode = evalResultObj.is_abnormal;
+                if (evalResultObj.client_eval != "0") {
+                    return callback(evalResultObj.client_eval);
+                }
+                return callback(null);
+            });
+        };
+
+        ExamOver.CompressOEF = function(callback) {
+            CEFWrapper.CompressOEF("", function (result) {
+                if (result != "") {
+                    console.log("生成考生答卷包出错：" + result);
+                    return callback(result);
+                }
+                return callback(null);
+            });
+        };
+
+        ExamOver.UploadAnswer = function(callback) {
+            // 重试10次
+            CEFWrapper.UploadAnswer(3, function (result) {
+                if (result != "") {
+                    console.log("上传考生答卷包出错：" + result);
+                    ExamOver.UploadFail = true;
+                    return callback(result);
+                }
+
+                ExamOver.UploadFail = false;
+                return callback(null);
+            });
+        };
+
+        ExamOver.ExamEnd = function(callback) {
+            // 重试10次
+            CEFWrapper.ExamEnd(ExamOver.AbnormalCode + "|" + ExamOver.ErrorCode, function (result) {
+                if (result != "") {
+                    console.log("考试结束出错：" + result);
+                    return callback(result);
+                }
+                return callback(null);
+            });
+        };
+
+        function documentReady() {
+            ExamOver.init(function () {
+                $("#waitBox").show();
+                $("#uploadFail").hide();
+                $("#goodbyeBox").hide();
+                ExamOver.WorkFlow1(function () {
+                    ExamOver.WorkFlow2();
+                });
+            });
+        };
+
+        function documentOver() {
+
+        }
+    </script>
+</head>
+<body>
+<div class="exam_box">
+    <div id="waitBox" style="text-align: center;">
+        <img  style="margin-top: 175px;" src="images/datiwancheng.gif"/>
+    </div>
+    <div id="uploadFail" style="text-align:center;display:none;">
+        <img src="images/upload_fail.png"  style="margin-top: 160px;"/>
+        <span class="btn_box"><input type="button" id="tryUpload" name="Submit" value="" class="btn_shiyinUsual btn_tryDownload" onclick="ExamOver.Restore()" style="position: absolute; top: 415px; left: 330px;" tabindex="-1" /></span>
+    </div>
+    <div id="goodbyeBox" class="test_sound" style="padding-top: 0px;display:none;">
+        <img style="margin-top: 165px;" id="img_examend" src="images/examend.png"/>
+    </div>
+</div>
+</body>
+</html>
+

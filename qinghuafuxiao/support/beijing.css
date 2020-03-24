@@ -1,0 +1,184 @@
+﻿/*.caption
+{
+    padding-left:20px;
+    }*/
+.cur
+{
+    cursor:pointer;
+    } 
+    
+     
+.guidTxt
+{
+    text-indent:32px;
+    /*font-family:"Inconsolata";TODO找一个适合英文的字体*/
+    font-size:17px;
+    line-height:150%;
+}
+
+.exam_box .words
+{
+    padding-left:45px;
+}
+
+.exam_box .caption font{
+	width: 30px;
+	padding-right: 0px;
+	text-align: left;
+}
+
+.exam_box .caption p
+{
+    padding-top:-1px;
+    padding-left: 0px;
+    font-size: 17px;
+}
+
+.exam_box .words img{
+	padding: 0px;
+}
+
+.Caption_DiscriptionText
+{
+    font-size:20px;
+}
+
+/*-----------------------按钮样式-------------------------------------*/
+
+/*-----------------------试题样式---------------------------------------*/
+.choice_font_style
+{
+    font-size:17px;
+    font-family:Arial;
+    margin-left:-12px;
+}
+    
+    .choice_font_style_1
+{
+    font-size:17px;
+    margin-left:-12px;
+    }
+    
+    
+.Caption_QuestionText
+{
+    font-weight:bold;
+    font-size:16px;
+    font-family:Arial;
+    /*margin-left:20px;*/
+    }
+    
+ .Topic_Tip
+ {
+     text-indent:32px;
+     font-size:18px;
+     }   
+  
+    .Caption_QuestionText1
+{
+    font-weight:bold;
+    font-size:16px;
+    font-family:Arial;
+    margin-left:10px;
+    }
+
+
+.TextReading_Content
+{
+    margin-left:-13px;
+    /*text-indent:32px;*/
+    font-size:17px;
+    font-family:Arial;
+}
+
+.TextReading_Tip
+{
+    padding-top:18px;
+    font-size:17px;
+    text-indent:32px;
+}
+
+.TopicStatement_Tip
+{
+    padding-left:20px;
+    font-size:17px;
+}
+
+.DialogChoiceSort{
+    min-height:56px;
+}
+
+.DialogChoiceSort font
+{
+    font-weight:600;
+}
+
+.DialogChoiceSort_Sidebar
+{
+    padding-left:20px;
+    width:200px;
+    float:left;
+}
+
+.DialogChoiceSort
+{
+    font-size:17px;
+    font-family:Arial;
+    }
+    
+.DialogChoiceSort_Content
+{
+	padding-left:30px;
+    margin-left:450px;
+    font-size:15px;
+    font-family:Arial;
+}
+
+.DialogChoiceSort_Content p
+{
+    min-height:56px;
+    line-height:28px;
+}
+
+
+.text-center
+{
+    text-align:center;
+}
+
+.text-right
+{
+    margin-top:20px;
+    text-align:right;
+}
+
+.Survey-QuestionNum
+{
+    font-weight:600;
+    padding-left:15px;
+}
+
+.LectureJudgment-top
+{
+    margin-top:30px;
+}
+    
+.LectureJudgment table
+{
+    border-collapse: collapse;
+    border: none;
+}
+    
+    .LectureJudgment th
+    {
+        border: solid #666666 2px;
+    }
+    
+    .LectureJudgment td
+    {
+         border: solid #666666 2px;
+    }
+
+.exam_box .caption {
+    padding: 0 15px 8px;
+}

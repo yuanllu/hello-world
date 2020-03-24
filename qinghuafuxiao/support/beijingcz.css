@@ -1,0 +1,83 @@
+﻿body
+{
+    font-family:"Times New Roman",verdana, tahoma, helvetica, arial, sans-serif;     
+}
+
+.text_content
+{
+    text-indent:32px;
+}
+
+.text_guide
+{
+    padding-top:18px;
+    font-size:16px;
+    text-indent:32px;
+}
+
+.exam_box .words
+{
+    padding-left:28px;
+}
+
+.topic_tip
+{
+    padding-left:32px;
+    font-size:16px;
+}
+
+.guidTxt
+{
+    text-indent:32px;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.guidTxt>p{
+    text-indent:32px;
+    font-size:18px;
+    line-height:1.5;
+    display: inline;
+}
+
+.Caption_QuestionPic
+{
+    margin:-8px auto;
+}
+
+.caption_promptText
+{
+    font-size: 16px;
+}
+
+
+
+.Caption_DiscriptionText
+{
+    margin: 5px 0;
+    margin-left: -50px;    
+}
+
+table td
+{
+    padding:0 10px;
+    font-size: 18px;
+}
+
+table input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    font-family: "Times New Roman",verdana, tahoma, helvetica, arial, sans-serif; 
+}
+
+.survery-choice p
+{
+    padding-left: 0px;
+}
+
+.Caption_QuestionText_RSR{
+    font-size: 32px;
+    line-height: 1.5
+}

@@ -1,0 +1,244 @@
+.exam_box
+{
+    position:relative;
+}
+
+.exam_box .finish
+{
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    width: 98%;
+}
+
+.exam_box .caption p>span>p{
+    font-size: 24px;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 0px;
+}
+
+.exam_box .checkanswer_title{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    width:100%;
+    padding-top:20px;
+}
+
+/*�Ͳ����Ͷ���*/
+.exam_box input
+{
+    cursor:pointer;    
+}
+
+input.disabled
+{
+    /*background:url(../images/btnGray.gif) no-repeat;*/
+    background-position: -330px 0;
+}
+
+/*--------------added by bingcheng to support xining--------------------*/
+#question div.caption
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+/*----------------------------------------------------------------------*/
+
+/*�Ͳ����Ͷ���*/
+/*#question div.caption p span
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+    display: block;
+}
+
+#question div.caption p
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+}*/
+
+div.caption>p>span
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+    display: block;
+}
+
+div.caption p
+{
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#question div.caption p span.cur
+{
+    color:#FF6600;
+}
+
+.cur{
+    color:#FF6600;
+}
+
+.btn_usual
+{
+    cursor:pointer;
+}
+
+.dashedBottom
+{
+    border-bottom: 1px dashed #000000;
+    /* line-height:50px; */
+    margin-bottom:10px;
+}
+
+.guidTxt
+{
+    text-indent:32px;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.Caption_DiscriptionText
+{
+    font-size:16px;
+}
+
+.exam_box .caption{
+	line-height: 30px;
+	font-size: 20px;
+	/*font-family:Calibri;*/
+}
+
+.exam_box .caption font
+{
+    font-size: 20px;
+	/*font-family:Calibri;*/
+    line-height: 30px;
+	width: 40px;
+	padding-right: 0px;
+	text-align: left;
+}
+
+.exam_box .caption p
+{
+    line-height: 30px;
+	font-size: 16px;
+    /*padding-left: 30px;*/
+    /*font-family:Calibri;*/
+}
+
+.exam_box .words
+{
+    line-height: 26px;
+	font-size: 20px;
+	/*font-family:Calibri;*/
+    padding-left:32px;
+}
+
+.exam_box .caption .survery-choice p
+{
+    padding-left: 15px;
+}
+
+.exam_box .caption table td p
+{
+    font-size: 18px;
+    padding-left: 0px;
+}
+
+.text-right
+{
+    margin:30px 0 0 630px;
+}
+
+.blanks_fillblanks
+{
+    font-size: 18px;
+    background-color: #DFE9F4;
+    margin-left: -50px;
+    margin-right: -25px;
+}
+
+.blanks_fillblanks input[type=text]
+{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    font-family: "Times New Roman",verdana, tahoma, helvetica, arial, sans-serif; 
+    background-color: #DFE9F4;
+}
+
+.blanks_fillblanks span{
+    padding-right: 3px;
+}
+
+.situationPresentation_promptText{
+     padding-left: 30px;
+     padding-bottom: 10px;
+     font-size: 24px;
+     line-height: 1.5;
+}
+
+.situationPresentation_promptText span{
+}
+
+.retelling_promptText{
+    font-size: 24px;
+    line-height: 1.5;
+    text-indent: 32px;
+}
+
+.Caption_DiscriptionText span{
+    font-size: 18px;
+    line-height: 1.5;
+    background-color:#FFF68F;
+    font-weight: bold;
+}
+
+.Caption_QuestionText span p{
+    font-size: 18px;
+    line-height: 1.5;
+    background-color:#FFF68F;
+    font-weight: bold;
+}
+
+.Caption_QuestionText1{
+    padding-top: 5px;
+}
+
+.Caption_QuestionText_RSP {
+    padding-top: 30px;
+}
+
+/*input[type="radio"]{*/
+    /*visibility: hidden;*/
+/*}*/
+
+/*.radio_normal{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_normal.png) no-repeat 0 6px;*/
+    /**/
+/*}*/
+
+/*.radio_checked{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_checked.png) no-repeat 0 7px;*/
+/*}*/
+
+/*.radio_normal_survey{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_normal.png) no-repeat 0 -1px;*/
+    /**/
+/*}*/
+
+/*.radio_checked_survey{*/
+    /*padding-left: 10px;*/
+    /*background: url(../images/radio_checked.png) no-repeat 0 0;*/
+/*}*/

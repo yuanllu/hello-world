@@ -1,0 +1,10 @@
+﻿function view_mainsection(pageIndex)
+{
+	var currentAction = Action.getCurrentAction();
+	var viewFlag = String.format("vf_{0}", pageIndex);
+	if (document.getElementById(viewFlag) !== null) return; //如果当前此页已显示，则忽略
+	var vbld = new ViewBuilder($("#question"));
+	ShowTitle($res("mb:section>title"));
+	ShowDescription($res("mb:section>text"));
+	vbld.Append_ViewPageFlag(viewFlag); //添加显示页标识，用于显示优化
+}

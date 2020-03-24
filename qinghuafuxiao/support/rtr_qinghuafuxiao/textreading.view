@@ -1,0 +1,35 @@
+﻿ function view_textreading(pageIndex) {
+	var currentAction = Action.getCurrentAction();
+	var viewFlag = String.format("vf_{0}_page{1}", $res("mb:section.name"), pageIndex);
+	if (document.getElementById(viewFlag) !== null) return; //如果当前此页已显示，则忽略
+	ShowTitle($res("mb:section>title"));
+	ShowDescription($res("mb:section>text"));	
+	var vbld = new ViewBuilder($("#question"));
+	var category = $res("mb:question.category");
+	var questionText = $res('xt:question>data[name=content].data');
+	var fixStr = String.format("{0}_{1}_{2}", currentAction.itemIndex, currentAction.groupIndex, currentAction.questionIndex);
+	if(category === "words")
+	{
+		var arrWords = questionTxt.split('|');
+		vbld.Append_Words(arrWords);
+	}
+	else
+	{
+		var htmlContent = [];
+		htmlContent.push('<div class="TextReading_Content">');
+        htmlContent.push(questionText);
+        htmlContent.push('</div>');
+		vbld.Append_Text(htmlContent.join(''));
+	}
+	var tipTxt = $res("mb:group>text");
+	if(tipTxt && pageIndex === 1)
+	{
+		var tipContent = [];
+		tipContent.push('<div class="TextReading_Tip">');
+		tipContent.push(tipTxt);
+		tipContent.push('</div>');
+		vbld.Append_Text(tipContent.join(''));
+	}
+	$(".TextReading_Content").parent().css("height","470px").css("overflow-y","auto");// 朗读题添加滚动条
+	vbld.Append_ViewPageFlag(viewFlag); //添加显示页标识，用于显示优化
+}
